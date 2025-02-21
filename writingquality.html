@@ -47,14 +47,17 @@
               <tbody>
                 <tr>
                   <td style="padding:16px; vertical-align:middle;">
-                    <h2>Projects &amp; Inspirations</h2>
+                    <h2>Code Overview:</h2>
                     <p>
-                      Diving into the world of machine learning and data science, I pushed myself to explore innovative methods to evaluate writing quality. The process involved extracting intricate features from extensive keystroke logs, splitting the data for training and validation, and fine-tuning my model using a Random Forest Generator. Experimenting with root mean scaling instead of the conventional standard scaler opened my eyes to the importance of customizing preprocessing techniques to the unique characteristics of the data.
-                    </p>
+                      The system starts by loading three key datasets: training logs (containing keystroke data from essays with known scores), training scores (the actual scores for those essays), and test logs (keystroke data from new essays that need scoring). 
                     <p>
-                      Each step of this project—despite the challenges—has been a testament to how self-driven learning can turn initial confusion into a powerful, functioning model. I continue to be inspired by the endless possibilities that arise when technology meets creativity.
+                      For each essay, the system extracts various behavioral features that indicate how the writing process unfolded. These features include the total number of keystrokes, how long the student spent writing, their average time between actions, and different types of writing behaviors (like typing new text, deleting, pasting, or replacing content). 
+                    <p>
+                      It also tracks more sophisticated metrics like the ratio of revision activities (deletions, pastes, and replacements) to total actions, the number of long pauses (defined as breaks longer than 2 seconds), the final word count, and the typing speed in characters per second. Once these features are extracted, they're used to train a Random Forest machine learning model. 
                     </p>
-                  </td>
+                    This model learns patterns between these writing behaviors and essay scores from the training data. After training, the model can then predict scores for new essays based solely on how they were written, without ever needing to read the actual content. The system uses multiple decision trees (100 of them, with a maximum depth of 10) to make its predictions, combining their outputs to generate a final score prediction. This approach suggests that the way a student writes - their process, pacing, and revision patterns - might be just as indicative of essay quality as the content itself.
+                     </td>
+                    </p>
                 </tr>
               </tbody>
             </table>
