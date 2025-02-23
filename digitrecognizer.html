@@ -20,9 +20,9 @@
                   <td style="padding:2.5%; width:63%; vertical-align:middle;">
                     <p class="name" style="text-align:center;">All About My Digit Recognizer</p>
                     <p>
-                    The idea that computers could read and get what we write has always made me curious. Machine learning allows the spotting of all patterns, the handling of every bit of info, and the guessing of future events in their entirety, a feat previously doable by people alone. All of the possibilities appeared completely endless. Therefore, I wanted to fully understand every one of the easy basics of how it all functions before diving in too deep.
+                    The idea that computers could read and understand what we write has always made me curious. Machine learning allows the spotting of all patterns, the handling of every bit of info, and the guessing of future events, something previously doable only by humans. All possibilities have became completely endless. Therefore, I wanted to fully understand the basics of how it all functions before diving in too deep.
                     <p>
-                    The process only requires that a model is trained for recognition of all patterns within each data segment. It learns from what it sees and changes over time, so it gets better at being correct. I wanted to know how machines take handwriting, which can be messy, and turn it into data they can study. The system's ability to make accurate guesses about what a simple picture showed gave a clear peek into the wide-ranging subject of AI comprehension.
+                    The process only requires that a model is trained for recognition of all patterns within each data segment. It learns from what it sees and changes over time, so it gets better at being more accurate. I wanted to know how machines take handwriting, which can be messy, and turn it into data they can study. The system's ability to make accurate guesses in a less than a second with only the drawing the user draws, gives a clear peek into the wide-ranging subject of AI comprehension.
                     <p>
                     This small experiment, in addition to being just the start, showed me how great machine learning could be.                  
                     <p>
@@ -40,19 +40,19 @@
                   <td style="padding:16px; vertical-align:middle;">
                     <h2>Digit Recognizer Code Overview</h2>
                     <p>
-                    This code implements a handwritten digit recognition system with a graphical user interface. Here's how the entire system works:
+                    This code implements a handwritten digit recognition system with a GUI. Here's how the entire system works:
 
-                    The application creates an interactive window where users can draw digits using their mouse. It uses the Tkinter library to create a 280x280 pixel black canvas for drawing, alongside buttons for prediction and clearing. 
+                    The application creates an interactive window where users can draw digits using their mouse. It uses the Tkinter library to create a 280x280 pixel black canvas for drawing, also with 2 buttons for prediction and clearing. 
                     <p>
                       When users draw on the canvas, the application tracks their mouse movements to create smooth white lines, simultaneously recording these drawings both on the visible canvas and in a separate image buffer. 
                     </p>
-                    Behind the scenes, the system uses a Multi-Layer Perceptron (neural network) that's trained on a dataset of handwritten digits (from the 'train.csv' file). 
+                    Behind the scenes, the system uses a Multi-Layer Perceptron (neural network) that's trained on a dataset of handwritten digits from a training file. 
                     <p>
                     During training, the model processes thousands of 28x28 pixel images of digits, with each pixel's brightness serving as a feature, and learns to recognize patterns that distinguish different digits. 
                     <p>
-                    The model uses two hidden layers (with 128 and 64 neurons respectively) and is trained for 50 iterations. When a user clicks the "Predict" button, the system processes their drawing by resizing it to 28x28 pixels (the same size as the training data), converts it to a grayscale numpy array, flattens it into a single row of pixel values, and scales these values to match the training data's distribution. 
+                    The model uses two hidden layers (with 128 and 64 neurons respectively) and is trained for 50 iterations. When a user clicks the "Predict" button, the system processes their drawing by resizing it to 28x28 pixels, converts it to a grayscale numpy array, flattens it into a single row of pixel values, and scales these values to match the training data's distribution. 
                   <p>
-                  The trained neural network then analyzes this processed image and predicts which digit (0-9) it believes was drawn. The prediction is immediately displayed on the interface. Users can clear their drawing at any time using the "Clear" button and try again with a different digit. The entire system combines real-time drawing capabilities, image processing, machine learning, and a user-friendly interface to create an interactive digit recognition application.                    
+                  The trained neural network then analyzes this processed image and predicts which digit it believes was drawn. The prediction is immediately displayed on the interface. Users can clear their drawing at any time using the "Clear" button and try again with a different digit. The entire system combines real-time drawing capabilities, image processing, machine learning, and a user-friendly interface to create an interactive digit recognizer                    
                  </td>
                     </p>
                 </tr>
