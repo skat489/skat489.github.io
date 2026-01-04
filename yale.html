@@ -1,1 +1,102 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Sahi Kathika">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GeneCLIP: Understanding Genes Through DNA</title>
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  </head>
+
+  <body>
+    <table style="width:100%; max-width:800px; border:0; border-spacing:0; border-collapse:separate; margin:0 auto; text-align:center;">
+      <tbody>
+        <tr>
+          <td style="padding:0;">
+            <table style="width:100%; border:0; margin:0 auto; text-align:center;">
+              <tbody>
+                <tr>
+                  <td style="padding:2.5%; width:63%; vertical-align:middle; text-align:center;">
+                    <p class="name">GeneCLIP</p>
+                    <p>
+                      I have always been curious about how much information is truly hidden inside DNA. Genes are usually described using text — their function, behavior, and clinical relevance — but DNA itself is rarely connected directly to language in a meaningful way.
+                    </p>
+                    <p>
+                      GeneCLIP explores whether a model can learn the *meaning* of a gene directly from its DNA sequence. Instead of predicting a single label, the goal is to align DNA with natural language descriptions so the model understands what a gene does, not just where it is.
+                    </p>
+                    <p>
+                      By learning a shared space between genomic sequences and gene descriptions, this project aims to create a foundation for tasks like gene discovery, similarity search, and understanding genetic variants using language-based reasoning.
+                    </p>
+                    <p>
+                      <a href="https://skat489.github.io"> Home /</a>
+                      <a href="mailto:sahitkathika@gmail.com"> Email</a> &nbsp;/&nbsp;
+                      <a href="https://github.com/skat489/">Github</a>
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            
+            <table style="width:100%; border:0; margin:0 auto; text-align:center;">
+              <tbody>
+                <tr>
+                  <td style="padding:16px; vertical-align:middle; text-align:center;">
+                    <h2>Code Overview:</h2>
+                    <p>
+                      GeneCLIP starts by loading two types of data: genomic DNA sequences extracted from a reference genome, and text-based gene annotations describing gene function, biological pathways, and clinical relevance.
+                    </p>
+                    <p>
+                      Each DNA sequence is converted into a numerical format and passed through a transformer-based encoder that learns patterns in nucleotide sequences. At the same time, gene descriptions are processed using a biomedical language model trained on scientific literature.
+                    </p>
+                    <p>
+                      Both the DNA and text representations are projected into the same embedding space and trained using a contrastive learning objective. This encourages matching DNA–text pairs to move closer together while pushing unrelated pairs farther apart.
+                    </p>
+                    <p>
+                      Over time, the model learns to associate specific DNA patterns with meaningful biological descriptions. Once trained, GeneCLIP can retrieve the correct gene description from DNA alone, or find the most relevant DNA sequence given a textual description. This suggests that genetic information can be understood and compared using language-based representations.
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+          <table style="width:100%; border:0; margin:0 auto;">
+              <tbody>
+                <tr>
+                  <td style="padding:8px; vertical-align:middle;">
+                    <a href="https://github.com/skat489/Yale-GLM-Research-Paper">
+                      <span class="papertitle">Download the Code and Try It Out!</span>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            
+            <table style="width:100%; border:0; margin:0 auto; padding:16px;">
+              <tbody>
+                <tr>
+                  <td>
+                    <table style="width:100%; border:0; margin:0 auto; padding:16px;">
+              <tbody>
+                <tr>
+            
+            <table style="width:100%; border:0; margin:0 auto;">
+              <tbody>
+                <tr>
+                  <td style="padding:0;">
+                    <br>
+                    <p style="text-align:right; font-size:small;">
+                      Replicated from <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron</a>.
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
 
